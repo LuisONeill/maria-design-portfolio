@@ -1,0 +1,46 @@
+/* ===== Hero section ===== */
+.hero {
+    position: relative;
+    overflow: hidden;
+    height: 420px !important;
+    max-height: 60%;
+    width: 100% !important;
+    display: none;
+    box-shadow: 0 20px 24px rgba(250, 250, 250, 0.5);
+
+    @media (min-width: 768px) {
+        display: block;
+    }
+}
+
+/* Add blur effect to hero images */
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 5px solid #ffffff31; 
+    backdrop-filter: blur(4px);
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.hero.quotidiano-hero img {
+    object-position: center bottom;
+    /* Specific styles for the Quotidiano hero section can be added here */
+}
+.hero.wit-hero img {
+    /* Specific styles for the Wit hero section can be added here */
+    object-position: center 20%;
+}   
+.hero.molnart-hero img {
+    /* Specific styles for the Molnart hero section can be added here */
+    object-position: center 40%;
+}
+

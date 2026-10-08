@@ -1,0 +1,237 @@
+
+/* 
+======================
+Outros page styles
+======================
+*/
+.outros-title {
+    text-transform: uppercase;
+    font-weight: 490;
+    font-size: clamp(3rem, 7vw, 10rem);
+    position: absolute;
+    top: 15%;
+    z-index: -1;
+}
+.title-left {
+    left: 5%;
+    animation: rotateGrow 1s ease-in 2;
+}
+.title-right {
+    right: 5%;
+    animation: rotateGrow 1s ease-in 2 .5s;
+}
+
+.carousel-container {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 60px + 32px);
+}
+
+
+
+@keyframes rotateGrow {
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+
+}
+
+#carousel {
+    /* background: #10101059; */
+    position: relative;
+    flex-grow: 1;
+    overflow-x: hidden;
+    width: 100%; /* Change back to 100%*/
+    perspective: 700px; /* Change this to 900px if necessary */
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+    transition: all 1s ease;
+}
+
+#carousel .slide {
+    position: absolute;
+    top: 55%;
+    /* height: 200px;
+    width: 300px; */
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    transform-origin: center;
+    overflow: hidden;
+    transition: all 1s ease;
+}
+
+#carousel div img {
+    max-height: 150px;
+    max-width: 150px;
+    object-fit: cover;
+    transition: all 1s ease-out;
+}
+
+/* Terrible fix to make center image larger */
+#carousel .slide[data-offset="0"] img {
+    /* width:100%; */
+    /* margin: 0 auto; */
+    max-height: 200px;
+    max-width: 200px;
+    object-fit: cover;
+    /* transition: all 0.5s ease-in; */
+}
+
+.carousel .slide[data-offset="0"] {
+    transform: translate(-50%, -50%) rotateY(0);
+    left: 50%;
+    opacity: 1;
+    z-index: 5;
+}
+
+.carousel .slide[data-offset="1"] {
+    transform: translate(-50%, -50%) rotateY(-70deg);
+    left: 80%;
+    opacity: 0.8;
+    z-index: 4;
+}
+
+.carousel .slide[data-offset="-1"] {
+    transform: translate(-50%, -50%) rotateY(70deg);
+    left: 20%;
+    opacity: 0.8;
+    z-index: 4;
+}
+
+/* Continue through offsets 2, -2, 3, -3, 4, -4. */
+.carousel .slide[data-offset="2"] {
+    transform: translate(-50%, -50%) rotateY(-72deg);
+    left: 85%;
+    opacity: 0.6;
+    z-index: 3;
+}
+
+.carousel .slide[data-offset="-2"] {
+    transform: translate(-50%, -50%) rotateY(72deg);
+    left: 15%;
+    opacity: 0.6;
+    z-index: 3;
+}
+
+.carousel .slide[data-offset="3"] {
+    transform: translate(-50%, -50%) rotateY(-74deg);
+    left: 90%;
+    opacity: 0.4;
+    z-index: 2;
+}
+
+.carousel .slide[data-offset="-3"] {
+    transform: translate(-50%, -50%) rotateY(74deg);
+    left: 10%;
+    opacity: 0.4;
+    z-index: 2;
+}
+
+.carousel .slide[data-offset="4"] {
+    transform: translate(-50%, -50%) rotateY(-76deg);
+    left: 95%;
+    opacity: 0.2;
+    z-index: 1;
+}
+
+.carousel .slide[data-offset="-4"] {
+    transform: translate(-50%, -50%) rotateY(76deg);
+    left: 5%;
+    opacity: 0.2;
+    z-index: 1;
+}
+
+.carousel .slide[data-offset="5"] {
+    transform: translate(-50%, -50%) rotateY(-78deg);
+    left: 100%;
+    opacity: 0.1;
+    z-index: 0;
+}
+
+.carousel .slide[data-offset="-5"] {
+    transform: translate(-50%, -50%) rotateY(78deg);
+    left: 0%;
+    opacity: 0.1;
+    z-index: 0;
+}
+
+.carousel .slide:not(
+    [data-offset="0"],
+    [data-offset="1"],
+    [data-offset="-1"],
+    [data-offset="2"],
+    [data-offset="-2"],
+    [data-offset="3"],
+    [data-offset="-3"],
+    [data-offset="4"],
+    [data-offset="-4"]
+) {
+    opacity: 0;
+    pointer-events: none;
+}
+
+#carousel-progress-bars {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Removed this and replacd with utilities 06-10 */
+/* #carousel-progress-bars .carousel-progress-bar {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: lightgray;
+    
+} */
+
+#carousel-progress-bars .carousel-progress-bar.active {
+    background: black;
+    padding: 6px;
+    transition: background-color 1s ease;
+    
+}
+
+
+/* Small screens */
+/* @media (min-width: 480px) {
+
+}*/
+
+/* Small screens */
+/* @media (min-width: 576px) { 
+} */
+
+/* Medium screens */
+@media (min-width: 768px) {
+
+    /* ====== PROJECTS ====== */
+    /* Change links font to transparent on hover */
+    #carousel div img {
+    /* width:100%; */
+    /* margin: 0 auto; */
+    max-height: 300px;
+    max-width: 300px;
+    object-fit: cover;
+    }
+
+    /* Terrible fix to make center image larger */
+    #carousel .slide[data-offset="0"] img {
+        /* width:100%; */
+        /* margin: 0 auto; */
+        max-height: 350px;
+        max-width: 350px;
+        object-fit: cover;
+        /* transition: all 0.5s ease-in; */
+    }
+}
+
+/* Large screen */
+@media (min-width: 992px) {
+    
+}
