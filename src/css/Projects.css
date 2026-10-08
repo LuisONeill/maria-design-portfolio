@@ -1,0 +1,121 @@
+:root {
+    --marquee-image-height: 13rem;
+}
+
+/* ===== Projects Links ===== */
+
+
+/* Hide hover popping images by default */
+#projects-page .pop {
+    display: none;
+    white-space: nowrap;
+    /* transition:all 0.1s ease-in-out; */
+}
+
+
+/* Style the project links */
+
+
+/* Style the menu images */
+
+/* #projects-page #link-hover-metadata {
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+} */
+
+/* Style the date and sub-title that pops up when link is hovered */
+.metadata {
+    color: var(--ring);
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    font-family: 'Courier New', Courier, monospace;
+}  
+
+.image-marquee {
+    position: absolute;
+    top: calc(100% - var(--marquee-image-height) - .5rem);
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    z-index: -1;
+    /* transform: translateY(-50%); */
+    /* Add width if necessary */
+}
+
+/* 
+Side scrolling images on projects page
+*/ 
+
+.image-marquee__track {
+    display: flex;
+    width: max-content;
+    animation: image-marquee-scroll 20s linear infinite;
+}
+
+.image-marquee__set {
+    display: flex;
+    /* flex: none; */
+    gap: 1rem;
+    padding-right: 1rem; /* must equal the gap */
+}
+.image-marquee img {
+    display: block;
+    flex: none;
+    height: var(--marquee-image-height);
+    object-fit: cover;
+}
+
+@keyframes image-marquee-scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+
+/* Small screens */
+/* @media (min-width: 480px) {
+}*/
+
+/* Small screens */
+/* @media (min-width: 576px) { 
+    
+} */
+
+/* Medium screens */
+@media (min-width: 768px) {
+    
+    /* ====== PROJECTS ====== */
+    /* Change links font to transparent on hover */
+    .menu-links .menu-link a:hover {
+        color: transparent !important;
+        -webkit-text-stroke: 2px #222 !important;
+    }
+
+    /* Hide the marquee from medium screens and on */
+    .image-marquee {
+        display: none; 
+    }
+
+    /* Alow the pop images to be displayed when their corresponding link is hovered */
+    #projects-page:has(.menu-link[data-target="quotidiano"] a:hover) .pop[data-target="quotidiano"],
+    #projects-page:has(.menu-link[data-target="wit"] a:hover) .pop[data-target="wit"],
+    #projects-page:has(.menu-link[data-target="molnart"] a:hover) .pop[data-target="molnart"],
+    #projects-page:has(.menu-link[data-target="outros"] a:hover) .pop[data-target="outros"] {
+        display: block;
+    }
+
+}
+
+/* Large screen */
+@media (min-width: 992px) {
+    .menu-links {
+        max-width: 80%;
+    }
+    
+}
+   
