@@ -13,9 +13,6 @@ const projectImages = Object.values(
 )
 
 function Outros() {
-
-    
-
     useEffect(() => {
         const carouselCleanup = initCarousel();
         return carouselCleanup
