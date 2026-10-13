@@ -52,9 +52,9 @@ function Outros() {
                 {/* <!-- TODO: The active bar must correspond to the index of the current slide --> */}
                 <div className="h-2/10 flex flex-col justify-end items-center pb-[1rem]">
                     <div id="slideTitle" className="carousel-description text-center text-gray-500 mb-5">
-                        <p>42 × 29.7 cm </p>
+                        {/* <p>42 × 29.7 cm </p>
                         <p>Marker, ballpoint pen and gouache on paper </p>
-                        <p>Inspired by the work of Nadir Afonso</p>
+                        <p>Inspired by the work of Nadir Afonso</p> */}
                     </div>
                     
                     <div id="carousel-progress-bars" className="flex gap-x-5 md:hidden" aria-label="Carousel progress bars">

@@ -38,7 +38,7 @@ function ProjectContentInfo({ title, paragraphs, activeTag, activeDesignSubject 
                 id="page-content-metadata"
                 className="col-span-2 md:col-span-1"
             >
-                <h1 className="mb-10 text-[4rem]">{title.toUpperCase()}</h1>
+                <h1 className="mb-10 text-[clamp(3rem,6vw,5rem)]">{title.toUpperCase()}</h1>
                 <div className="flex flex-wrap gap-[1rem] mb-[1rem]">
                     <span
                         className={`tag text-nowrap ${tagIndex === 0 ? 'text-stone-900' : 'text-stone-400'}`}
@@ -99,7 +99,7 @@ function ProjectContentInfo({ title, paragraphs, activeTag, activeDesignSubject 
                         )
                     }
                 </span>
-                <p className="">ABOUT THE PROJECT</p>
+                <p className="text-nowrap">ABOUT THE PROJECT</p>
             </button>
             {/* <!-- Text hidden at small screens --> */}
             <div
@@ -107,7 +107,7 @@ function ProjectContentInfo({ title, paragraphs, activeTag, activeDesignSubject 
                 className="hidden md:block col-span-2 md:col-span-1"
             >
                 {paragraphs.map((value) => {
-                    return <p className='mb-[1rem] text-start text-base/7' key={value}> {value} </p>
+                    return <p className='mb-[1rem] text-start text-base/7 text-pretty' key={value}> {value} </p>
                 })}
             </div>
         </div>

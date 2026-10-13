@@ -1,46 +1,25 @@
 const carouselImageSubTitles = [
         [
-            '42 × 29.7 cm ', 
-            'Marker, ballpoint pen and gouache on paper ', 
-            'Inspired by the work of Nadir Afonso'
-        ],
-        [
             '134 × 105 cm ', 
             'Mixed media textile: embroidery and pen on fabric'
         ],
         [
-            'Series of 5 photographs ', 
-            'Captured in Madeira'
+            '42 × 29.7 cm',
+            'Marker and oil pastel on paper',
+            'Inspired by the work of Eduardo Nery'
         ],
         [
             'Acrylic installation composed of 16 pieces'
 
         ],
         [
-            'Reflection on Portugal\'s youth and their future ', 
-            'Embroidery and hand painted textile illustrations'
+            'Series of 5 photographs ', 
+            'Captured in Madeira'
         ],
         [
             '42 × 29.7 cm ', 
             'Marker, ballpoint pen and gouache on paper ',
             'Inspired by the work of Nadir Afonso'
-        ],
-        [
-            'Reflection on Portugal\'s youth and their future ',
-            'Embroidery and hand painted textile illustrations'
-        ],
-        [
-            'Reflection on Portugal\'s youth and their future ',
-            'Embroidery and hand painted textile illustrations'
-        ],
-        [
-            'Reflection on Portugal\'s youth and their future ', 
-            'bEmbroidery and hand painted textile illustrations'
-        ],
-        [
-            '42 × 29.7 cm ', 
-            'Marker and oil pastel on paper ', 
-            'Inspired by the work of Artur do Cruzeiro Seixas'
         ],
     ]
 
