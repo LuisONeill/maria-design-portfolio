@@ -7,7 +7,16 @@ function HeroSection({ imageSrc, imageAlt, className }) {
 
     return (
         <div className={`hero ${className} w-[100%]`}>
-            <img src={imageSrc} alt={imageAlt} id="hero-image" className='w-[100%]' />
+            <img 
+                src={imageSrc} 
+                alt={imageAlt}
+                loading='eager'
+                fetchPriority='high'
+                // decoding='sync'
+                
+                id="hero-image" 
+                className='w-[100%]' 
+            />
         </div>
     )
 }

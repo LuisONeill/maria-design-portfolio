@@ -2,7 +2,7 @@ import "../css/Projects.css"
 
 // Get all images for image-marquee
 const projectImages = Object.values(
-  import.meta.glob("../assets/projects/*.{png,jpg,jpeg}", {
+  import.meta.glob("../assets/projects/*-540.webp", {
     eager: true,
     query: "?url",
     import: "default",
@@ -10,10 +10,10 @@ const projectImages = Object.values(
 )
 
 // Images to display when project links are hovered.
-import quotidianoPopImage from "../assets/quotidiano/42ad145535bd7cf0bda09d27b61f9c8d08eb1d96.png" 
-import witPopImage        from "../assets/projects/5993ac554b4113849508e46bb004b23daee95f69.png" 
-import molnartPopImage    from "../assets/molnart/hero-image.png"
-import outrosPopImage     from "../assets/projects/5d5bbc0e74cf6426bf08dc325dd0850aef51fc6d.png"
+import quotidianoPopImage from "../assets/quotidiano/42ad145535bd7cf0bda09d27b61f9c8d08eb1d96-1440.webp" 
+import witPopImage        from "../assets/projects/5993ac554b4113849508e46bb004b23daee95f69-1440.webp" 
+import molnartPopImage    from "../assets/molnart/hero-image-540.webp"
+import outrosPopImage     from "../assets/projects/5d5bbc0e74cf6426bf08dc325dd0850aef51fc6d-540.webp"
 import { Link } from "react-router-dom"
 
 
@@ -29,14 +29,14 @@ function Projects() {
     return (
         <main
             id="projects-page"
-            className="overflow-hidden site-container h-dvh"
+            className="overflow-hidden site-container h-svh"
         >
             {/* <!-- ================ Projects Navigation ============= --> */}
             <div
                 id="menu-links-container"
-                className="content-center h-8/10 flex items-start p-2 pt-[5rem] mt-8 z-3"
+                className="content-center h-8/10 flex items-start py-2 pt-[5rem] mt-8 z-3"
             >
-                <h1 className="menu-links leading-[clamp(1rem,10vw,4rem)] p-3">
+                <h1 className="menu-links leading-[clamp(1rem,10vw,4rem)] py-3">
                     {/* Generate each project link to avoid reapeating tailwind utilities*/}
                     {
                     projectLinks.map(

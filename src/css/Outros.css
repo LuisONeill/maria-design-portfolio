@@ -14,29 +14,15 @@ Outros page styles
 }
 .title-left {
     left: 5%;
-    animation: rotateGrow 1s ease-in 2;
 }
 .title-right {
     right: 5%;
-    animation: rotateGrow 1s ease-in 2 .5s;
 }
 
 .carousel-container {
     display: flex;
     flex-direction: column;
     height: calc(100vh - 60px + 32px);
-}
-
-
-
-@keyframes rotateGrow {
-    50% {
-        transform: scale(1.2);
-    }
-    100% {
-        transform: scale(1);
-    }
-
 }
 
 #carousel {
@@ -173,28 +159,10 @@ Outros page styles
     pointer-events: none;
 }
 
-#carousel-progress-bars {
-    display: flex;
-    margin: 0 auto;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-}
-
-/* Removed this and replacd with utilities 06-10 */
-/* #carousel-progress-bars .carousel-progress-bar {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: lightgray;
-    
-} */
-
 #carousel-progress-bars .carousel-progress-bar.active {
     background: black;
     padding: 6px;
     transition: background-color 1s ease;
-    
 }
 
 
@@ -213,11 +181,11 @@ Outros page styles
     /* ====== PROJECTS ====== */
     /* Change links font to transparent on hover */
     #carousel div img {
-    /* width:100%; */
-    /* margin: 0 auto; */
-    max-height: 300px;
-    max-width: 300px;
-    object-fit: cover;
+        /* width:100%; */
+        /* margin: 0 auto; */
+        max-height: 300px;
+        max-width: 300px;
+        object-fit: cover;
     }
 
     /* Terrible fix to make center image larger */
@@ -232,6 +200,6 @@ Outros page styles
 }
 
 /* Large screen */
-@media (min-width: 992px) {
+/* @media (min-width: 992px) {
     
-}
+} */

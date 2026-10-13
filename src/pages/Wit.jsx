@@ -6,11 +6,11 @@ import HeroSection from '../components/HeroSection'
 import ProjectContentInfo from '../components/ProjectContentInfo'
 
 // Import magazine's front and back pages
-import MagazineCoverFront from '../assets/wit/capa.jpg'
-import magazineCoverBack from '../assets/wit/capa-back.jpg'
+import MagazineCoverFront from '../assets/wit/capa-540.webp'
+import magazineCoverBack from '../assets/wit/capa-back-540.webp'
 // Import all magazine inner page images and sort them out
 const magazinePageImages = Object.entries(
-    import.meta.glob('../assets/wit/pag*.{png,jpg,jpeg}', {
+    import.meta.glob('../assets/wit/pag*-540.webp', {
         eager: true,
         query: '?url',
         import: 'default',
@@ -21,7 +21,7 @@ const magazinePageImages = Object.entries(
     )
     .map(([, src]) => src)
 // Import Hero image
-import HeroImage from '../assets/wit/hero-image.png'
+import HeroImage from '../assets/wit/hero-image-1440.webp'
 
 
 function Wit() {
@@ -83,7 +83,7 @@ function Wit() {
                             {/* <!-- Cover (front) --> */}
                             <div className="my-page" data-density="hard">
                                 <img
-                                    className=""
+                                    className="w-full h-full"
                                     src={MagazineCoverFront}
                                     alt=""
                                     srcSet=""
@@ -97,7 +97,7 @@ function Wit() {
                                         className="my-page"
                                     >
                                         <img
-                                            className=""
+                                            className="w-full h-full"
                                             src={imgSrc}
                                             alt={`Magazine page ${index}`}
                                             srcSet=""
@@ -108,7 +108,7 @@ function Wit() {
                             {/* <!-- Cover (back) --> */}
                             <div className="my-page" data-density="hard">
                                 <img
-                                    className=""
+                                    className="w-full h-full"
                                     src={magazineCoverBack}
                                     alt="Magazine back cover"
                                     srcSet=""

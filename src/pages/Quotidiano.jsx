@@ -4,33 +4,65 @@ import ProjectContentInfo from '../components/ProjectContentInfo'
 
 import { useEffect, useRef } from 'react'
 
-// Load image for the image layout
-import imageLayout1 from '../assets/quotidiano/278698382ca2ac165e5f7eafde405166574dde0b.png'
-import imageLayout2 from '../assets/quotidiano/42ad145535bd7cf0bda09d27b61f9c8d08eb1d96.png'
-import imageLayout3 from '../assets/quotidiano/78bee2c155bbd465147953afc0808538383aab68.png'
-import imageLayout4 from '../assets/quotidiano/9057e2c83beaacdfd0270c8e32d2b82680d4456e.png'
-import imageLayout5 from '../assets/quotidiano/e97b325addc1eee2ba378eb46850c0c6b7357d22.png'
-import imageLayout6 from '../assets/quotidiano/ccbbf00fa5d42aea5bcd1b1ebca08cf753b0f29a.png'
-import imageLayout7 from '../assets/quotidiano/b20469da21fd42b81a2504375d53688719179c8c.png'
-import imageLayout8 from '../assets/quotidiano/c24ab69e1648ca6580d68ccbb9b1054d089f2ede.png'
+
+// Hero image
+import heroImage from '../assets/quotidiano/1-1440.webp'
+// Load image for the image layout small
+import imageLayout1Sm from '../assets/quotidiano/278698382ca2ac165e5f7eafde405166574dde0b-540.webp'
+import imageLayout2Sm from '../assets/quotidiano/42ad145535bd7cf0bda09d27b61f9c8d08eb1d96-540.webp'
+import imageLayout3Sm from '../assets/quotidiano/78bee2c155bbd465147953afc0808538383aab68-540.webp'
+import imageLayout4Sm from '../assets/quotidiano/9057e2c83beaacdfd0270c8e32d2b82680d4456e-540.webp'
+import imageLayout5Sm from '../assets/quotidiano/e97b325addc1eee2ba378eb46850c0c6b7357d22-540.webp'
+import imageLayout6Sm from '../assets/quotidiano/ccbbf00fa5d42aea5bcd1b1ebca08cf753b0f29a-540.webp'
+import imageLayout7Sm from '../assets/quotidiano/b20469da21fd42b81a2504375d53688719179c8c-540.webp'
+import imageLayout8Sm from '../assets/quotidiano/c24ab69e1648ca6580d68ccbb9b1054d089f2ede-540.webp'
+// Load image for the image layout medium
+import imageLayout1Md from '../assets/quotidiano/278698382ca2ac165e5f7eafde405166574dde0b-960.webp'
+import imageLayout2Md from '../assets/quotidiano/42ad145535bd7cf0bda09d27b61f9c8d08eb1d96-960.webp'
+import imageLayout3Md from '../assets/quotidiano/78bee2c155bbd465147953afc0808538383aab68-960.webp'
+import imageLayout4Md from '../assets/quotidiano/9057e2c83beaacdfd0270c8e32d2b82680d4456e-960.webp'
+import imageLayout5Md from '../assets/quotidiano/e97b325addc1eee2ba378eb46850c0c6b7357d22-960.webp'
+import imageLayout6Md from '../assets/quotidiano/ccbbf00fa5d42aea5bcd1b1ebca08cf753b0f29a-960.webp'
+import imageLayout7Md from '../assets/quotidiano/b20469da21fd42b81a2504375d53688719179c8c-960.webp'
+import imageLayout8Md from '../assets/quotidiano/c24ab69e1648ca6580d68ccbb9b1054d089f2ede-960.webp'
+// Load image for the image layout large
+import imageLayout1Lg from '../assets/quotidiano/278698382ca2ac165e5f7eafde405166574dde0b-1440.webp'
+import imageLayout2Lg from '../assets/quotidiano/42ad145535bd7cf0bda09d27b61f9c8d08eb1d96-1440.webp'
+import imageLayout3Lg from '../assets/quotidiano/78bee2c155bbd465147953afc0808538383aab68-1440.webp'
+import imageLayout4Lg from '../assets/quotidiano/9057e2c83beaacdfd0270c8e32d2b82680d4456e-1440.webp'
+import imageLayout5Lg from '../assets/quotidiano/e97b325addc1eee2ba378eb46850c0c6b7357d22-1440.webp'
+import imageLayout6Lg from '../assets/quotidiano/ccbbf00fa5d42aea5bcd1b1ebca08cf753b0f29a-1440.webp'
+import imageLayout7Lg from '../assets/quotidiano/b20469da21fd42b81a2504375d53688719179c8c-1440.webp'
+import imageLayout8Lg from '../assets/quotidiano/c24ab69e1648ca6580d68ccbb9b1054d089f2ede-1440.webp'
+
 
 // Load image for the image layout
-import slideImage1 from '../assets/quotidiano/3d220ae96bb436f5cf513ffd0b405a1855de1872.png'
-import slideImage2 from '../assets/quotidiano/0097c15fad878026ed04ab30d86cc53cb14e0036.png'
-import slideImage3 from '../assets/quotidiano/6aac14d8a65c52245dc0b44ce7fee274c04a9edb.png'
-import slideImage4 from '../assets/quotidiano/d5b6a50e6f3deab289d829bad4ccf71644c58b35.png'
-import slideImage5 from '../assets/quotidiano/5afcaa5c2469be0e73a2cbbd9b5f39c0f944b774.png'
-import slideImage6 from '../assets/quotidiano/d154a76a2a658c1eeb9085d6de2c7a7220e287f3.png'
-import slideImage7 from '../assets/quotidiano/4c61e2aed9597fccd4b8e44d3903f020545c827d.png'
-import slideImage8 from '../assets/quotidiano/b0c43ee55ef03b16c918ca43858e099b506d6153.png'
-import slideImage9 from '../assets/quotidiano/7407e0dc64b6e74b09ab1ea48e19aaf5a6a7caec.png'
-import slideImage10 from '../assets/quotidiano/686a741587d375d29b86e3616660b4ecd6eca09e.png'
+import slideImage1 from '../assets/quotidiano/3d220ae96bb436f5cf513ffd0b405a1855de1872-540.webp'
+import slideImage2 from '../assets/quotidiano/0097c15fad878026ed04ab30d86cc53cb14e0036-540.webp'
+import slideImage3 from '../assets/quotidiano/6aac14d8a65c52245dc0b44ce7fee274c04a9edb-540.webp'
+import slideImage4 from '../assets/quotidiano/d5b6a50e6f3deab289d829bad4ccf71644c58b35-540.webp'
+import slideImage5 from '../assets/quotidiano/5afcaa5c2469be0e73a2cbbd9b5f39c0f944b774-540.webp'
+import slideImage6 from '../assets/quotidiano/d154a76a2a658c1eeb9085d6de2c7a7220e287f3-540.webp'
+import slideImage7 from '../assets/quotidiano/4c61e2aed9597fccd4b8e44d3903f020545c827d-540.webp'
+import slideImage8 from '../assets/quotidiano/b0c43ee55ef03b16c918ca43858e099b506d6153-540.webp'
+import slideImage9 from '../assets/quotidiano/7407e0dc64b6e74b09ab1ea48e19aaf5a6a7caec-540.webp'
+import slideImage10 from '../assets/quotidiano/686a741587d375d29b86e3616660b4ecd6eca09e-540.webp'
+
+// Load image for the image layout
+import slideImage1Md from '../assets/quotidiano/3d220ae96bb436f5cf513ffd0b405a1855de1872-960.webp'
+import slideImage2Md from '../assets/quotidiano/0097c15fad878026ed04ab30d86cc53cb14e0036-960.webp'
+import slideImage3Md from '../assets/quotidiano/6aac14d8a65c52245dc0b44ce7fee274c04a9edb-960.webp'
+import slideImage4Md from '../assets/quotidiano/d5b6a50e6f3deab289d829bad4ccf71644c58b35-960.webp'
+import slideImage5Md from '../assets/quotidiano/5afcaa5c2469be0e73a2cbbd9b5f39c0f944b774-960.webp'
+import slideImage6Md from '../assets/quotidiano/d154a76a2a658c1eeb9085d6de2c7a7220e287f3-960.webp'
+import slideImage7Md from '../assets/quotidiano/4c61e2aed9597fccd4b8e44d3903f020545c827d-960.webp'
+import slideImage8Md from '../assets/quotidiano/b0c43ee55ef03b16c918ca43858e099b506d6153-960.webp'
+import slideImage9Md from '../assets/quotidiano/7407e0dc64b6e74b09ab1ea48e19aaf5a6a7caec-960.webp'
+import slideImage10Md from '../assets/quotidiano/686a741587d375d29b86e3616660b4ecd6eca09e-960.webp'
 
 // CSS
 import '../css/Quotidiano.css'
 
-// Hero image
-import heroImage from '../assets/quotidiano/1.d64918bd.jpg'
 
 // ============= Slideshow scroll handler on small screens =============
 function handleWheel(event) {
@@ -125,16 +157,16 @@ function Quotidiano() {
     }, [])
 
     const slideImages = [
-        slideImage1,
-        slideImage2,
-        slideImage3,
-        slideImage4,
-        slideImage5,
-        slideImage6,
-        slideImage7,
-        slideImage8,
-        slideImage9,
-        slideImage10,
+        {'sm': slideImage1, 'md': slideImage1Md},
+        {'sm': slideImage2, 'md': slideImage2Md},
+        {'sm': slideImage3, 'md': slideImage3Md},
+        {'sm': slideImage4, 'md': slideImage4Md},
+        {'sm': slideImage5, 'md': slideImage5Md},
+        {'sm': slideImage6, 'md': slideImage6Md},
+        {'sm': slideImage7, 'md': slideImage7Md},
+        {'sm': slideImage8, 'md': slideImage8Md},
+        {'sm': slideImage9, 'md': slideImage9Md},
+        {'sm': slideImage10, 'md': slideImage10Md}
     ]
 
     // Paragraphs for ProjectContentInfo component
@@ -170,35 +202,55 @@ function Quotidiano() {
                 <div className="grid grid-cols-12 py-3 gap-5">
                     <div className="col-span-6 md:col-span-12">
                         <img
-                            src={imageLayout1}
+                            src={imageLayout1Md}
+                            srcSet={`${imageLayout1Sm} 540w, ${imageLayout1Md} 960w, ${imageLayout1Lg} 1140w`}
+                            sizes="(max-width: 760px) 50vw, 100vw"
+                            width="1440"
+                            height="960"
                             alt=""
                             className="w-[100%] h-[100%] object-cover"
                         />
                     </div>
                     <div className="col-span-6 md:col-span-4">
                         <img
-                            src={imageLayout2}
+                            src={imageLayout2Md}
+                            srcSet={`${imageLayout2Sm} 540w, ${imageLayout2Md} 960w, ${imageLayout2Lg} 1140w`}
+                            sizes="(max-width: 760px) 50vw, 30vw"
+                            width="1440"
+                            height="960"
                             alt=""
                             className="w-[100%] h-[100%] object-cover"
                         />
                     </div>
                     <div className="col-span-6 md:col-span-4">
                         <img
-                            src={imageLayout3}
+                            src={imageLayout3Md}
+                            srcSet={`${imageLayout3Sm} 540w, ${imageLayout3Md} 960w, ${imageLayout3Lg} 1140w`}
+                            sizes="(max-width: 760px) 50vw, 30vw"
+                            width="1440"
+                            height="960"
                             alt=""
                             className="w-[100%] h-[100%] object-cover"
                         />
                     </div>
                     <div className="col-span-6 md:col-span-4">
                         <img
-                            src={imageLayout4}
+                            src={imageLayout4Md}
+                            srcSet={`${imageLayout4Sm} 540w, ${imageLayout4Md} 960w, ${imageLayout4Lg} 1140w`}
+                            sizes="(max-width: 760px) 50vw, 30vw"
+                            width="1440"
+                            height="960"
                             alt=""
                             className="w-[100%] h-[100%] object-cover"
                         />
                     </div>
                     <div className="col-span-12">
                         <img
-                            src={imageLayout5}
+                            src={imageLayout5Md}
+                            srcSet={`${imageLayout5Sm} 540w, ${imageLayout5Md} 960w, ${imageLayout5Lg} 1140w`}
+                            sizes="100vw"
+                            width="1440"
+                            height="960"
                             alt=""
                             className="w-[100%] h-[100%] object-cover"
                         />
@@ -207,21 +259,33 @@ function Quotidiano() {
                 <div className="py-3 grid grid-cols-12 grid-rows-12 gap-5">
                     <div className="col-span-6 row-span-6">
                         <img
-                            src={imageLayout6}
+                            src={imageLayout6Md}
+                            srcSet={`${imageLayout6Sm} 540w, ${imageLayout6Md} 960w, ${imageLayout6Lg} 1140w`}
+                            sizes="50vw"
+                            width="1440"
+                            height="960"
                             alt=""
                             className="w-[100%] h-[100%] object-cover"
                         />
                     </div>
                     <div className="col-span-6 row-span-12">
                         <img
-                            src={imageLayout7}
+                            src={imageLayout7Md}
+                            srcSet={`${imageLayout7Sm} 540w, ${imageLayout7Md} 960w, ${imageLayout7Lg} 1140w`}
+                            sizes="(max-width: 760px) 50vw, 100vw"
+                            width="1440"
+                            height="960"
                             alt=""
                             className="w-[100%] h-[100%] object-cover"
                         />
                     </div>
                     <div className="col-span-6 row-span-6">
                         <img
-                            src={imageLayout8}
+                            src={imageLayout8Md}
+                            srcSet={`${imageLayout8Sm} 540w, ${imageLayout8Md} 960w, ${imageLayout8Lg} 1140w`}
+                            sizes="50vw"
+                            width="1440"
+                            height="960"
                             alt=""
                             className="w-[100%] h-[100%] object-cover"
                         />
@@ -241,7 +305,9 @@ function Quotidiano() {
                                     <img
                                         key={i}
                                         className="slide w-full max-h-full hidden object-cover md:static md:block md:grow-0 md:w-auto md:shrink-0 md:basis-[300px] object-cover"
-                                        src={imgSrc}
+                                        src={imgSrc.sm}
+                                        srcSet={`${imgSrc.sm} 590w, ${imgSrc.sm} 960w`}
+                                        sizes='(max-width: 760px) 100vw, 60vw'
                                         alt={`Slide image ${i}`}
                                     />
                                 )

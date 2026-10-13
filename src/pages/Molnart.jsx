@@ -5,28 +5,49 @@ import HeroSection from "../components/HeroSection"
 import ProjectContentInfo from "../components/ProjectContentInfo"
 
 // Images
-import heroImage from "../assets/molnart/hero-image.png"
-import contentImage1 from '../assets/molnart/candeeiro-escuro.png'
-import contentImage2 from '../assets/molnart/candeeiro-claro-1.png'
-import contentImage3 from '../assets/molnart/candeeiro-claro-2.png'
+import heroImage from "../assets/molnart/hero-image-1440.webp"
+// small
+import contentImage1Sm from '../assets/molnart/candeeiro-escuro-540.webp'
+import contentImage2Sm from '../assets/molnart/candeeiro-claro-1-540.webp'
+import contentImage3Sm from '../assets/molnart/candeeiro-claro-2-540.webp'
+// medium
+import contentImage1Md from '../assets/molnart/candeeiro-escuro-960.webp'
+import contentImage2Md from '../assets/molnart/candeeiro-claro-1-960.webp'
+import contentImage3Md from '../assets/molnart/candeeiro-claro-2-960.webp'
+// large
+import contentImage1Lg from '../assets/molnart/candeeiro-escuro-1440.webp'
+import contentImage2Lg from '../assets/molnart/candeeiro-claro-1-1440.webp'
+import contentImage3Lg from '../assets/molnart/candeeiro-claro-2-1440.webp'
 
 
 function Molnart() {
     
     const contentImages = [
         {
-            img: contentImage1,
+            imgs: {
+                'sm': contentImage1Sm,
+                'md': contentImage1Md,
+                'lg': contentImage1Lg,
+            },
             alt: 'Molnart lamp in the dark',
             objectPosition: 'object-bottom'
             
         },
         {
-            img: contentImage2,
+            imgs: {
+                'sm': contentImage2Sm,
+                'md': contentImage2Md,
+                'lg': contentImage2Lg,
+            },
             alt: 'Molnart lamp in the light - paralel',
             objectPosition: ''
         },
         {
-            img: contentImage3,
+            imgs: {
+                'sm': contentImage3Sm,
+                'md': contentImage3Md,
+                'lg': contentImage3Lg,
+            },
             alt: 'Molnart lamp in the light - diagonal',
             objectPosition: ''
         },
@@ -64,7 +85,10 @@ function Molnart() {
                                     <div key={i} className="mb-10">
                                         <img 
                                             className={`block h-full w-full object-contain ${imgItem.objectPosition}`}
-                                            src={imgItem.img} 
+                                            src={imgItem.imgs.md}
+                                            srcSet={`${imgItem.imgs.sm} 540w, ${imgItem.imgs.md} 960w, ${imgItem.imgs.lg} 1440w,`} 
+                                            width="1440"
+                                            height="960"
                                             alt={imgItem.alt} 
                                         />
                                     </div>
@@ -74,31 +98,6 @@ function Molnart() {
                                 <h1>No images in contentImages</h1>
                             )
                     }
-
-
-
-                    {/* Old */}
-                    {/* <div className="mb-10">
-                        <img 
-                            className="block h-full w-full object-bottom max-h-[500px] object-cover"
-                            src={contentImage1} 
-                            alt="Molnart lamp dark" 
-                        />
-                    </div>
-                    <div className="mb-10">
-                        <img 
-                            className="block h-full w-full max-h-[500px] object-cover" 
-                            src={contentImage2} 
-                            alt="Molnart lamp light straight" 
-                        />
-                    </div>
-                    <div className="mb-5 ">
-                        <img 
-                            className="block h-full w-full max-h-[500px] object-cover" 
-                            src={contentImage3} 
-                            alt="Molnart lamp light skewed" 
-                        />
-                    </div> */}
                 </div>
             </div>
         </div>
